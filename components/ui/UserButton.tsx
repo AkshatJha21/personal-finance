@@ -33,7 +33,7 @@ const UserButton = () => {
   return (
     <div className="relative flex items-center gap-x-6">
         <p>Hi 👋🏻, Akshat</p>
-        <div ref={buttonRef} onClick={openMenu} className="relative h-10 w-10 rounded-full transition bg-indigo-500 hover:bg-opacity-80 cursor-pointer text-white flex items-center justify-center">
+        <div ref={buttonRef} onClick={openMenu} className="relative h-10 w-10 rounded-full transition bg-gradient-to-b from-indigo-600 to-indigo-900 hover:text-opacity-50 cursor-pointer text-white flex items-center justify-center">
             <User className="h-5"/>
         </div>
         <div className="absolute top-14 right-0" ref={dropdownRef}>
@@ -56,7 +56,7 @@ const Dropdown = () => {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
         >
-            <div className="flex flex-col items-start gap-y-1">
+            <div className="flex flex-col items-start gap-y-1 text-sm">
                 <button className="py-2 px-4 transition-all hover:bg-slate-300 dark:hover:bg-opacity-10 rounded flex w-full items-center">
                     <Settings className="h-5 mr-2"/>
                     <p className="font-medium">Settings</p>
