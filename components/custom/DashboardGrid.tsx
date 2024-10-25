@@ -14,11 +14,28 @@ const DashboardGrid = () => {
                 </button>
             </div>
         </div>
-        <div className="flex flex-col w-full md:w-[30%] items-center justify-center">
-            Right
+        <div className="flex flex-col w-full md:w-[30%] items-center h-[85vh] p-8 border ml-6 rounded-2xl dark:border-neutral-500 bg-gradient-to-b from-indigo-100 to-slate-50 dark:from-neutral-950 dark:to-white/5">
+            <Card />
         </div>
     </div>
   )
 }
 
 export default DashboardGrid
+
+const Card = () => {
+    return (
+        <div className="flex flex-col justify-between h-1/3 w-full text-white bg-gradient-to-tr from-indigo-700 to-pink-400 rounded-2xl p-6">
+            <div className="flex justify-between w-full items-baseline">
+                <p className="font-light">Current Card</p>
+                <p className="font-medium text-sm">**** 6357</p>
+            </div>
+            <div className="text-4xl">
+                $ 5347.68
+            </div>
+            <div>
+                AKSHAT JHA
+            </div>
+        </div>
+    )
+}

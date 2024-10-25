@@ -10,7 +10,7 @@ const BottomNav = () => {
     const [selected, setSelected] = useState(tabs[0]);
   return (
     <div className='fixed bottom-6 flex w-full items-center justify-center'>
-        <div className='flex gap-x-4 p-2 bg-gradient-to-b from-slate-100 to-slate-200 dark:from-white/10 dark:to-white/15  rounded-md w-[80%] sm:w-[60%] shadow-md justify-between'>
+        <div className='flex gap-x-4 p-2 bg-gradient-to-b from-slate-100 to-slate-200 dark:from-neutral-700 dark:to-neutral-800  rounded-md w-[80%] sm:w-[60%] shadow-md justify-between'>
             {tabs.map((tab) => (
                 <Tab 
                     text={tab}
