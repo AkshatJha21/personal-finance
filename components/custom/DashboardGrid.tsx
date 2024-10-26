@@ -1,4 +1,4 @@
-import { ArrowDownCircle, ArrowLeftRight, ArrowUpCircle, MoreHorizontal, PlusIcon, SquareArrowRight } from "lucide-react"
+import { ArrowDownCircle, ArrowLeftRight, ArrowUpCircle, DollarSign, MoreHorizontal, PiggyBank, PlusIcon, SquareArrowRight } from "lucide-react"
 
 const DashboardGrid = () => {
   return (
@@ -82,11 +82,11 @@ const DashboardGrid = () => {
                         <p className="text-xl font-semibold">Funds</p>
                         <button className="text-xs font-medium dark:text-pink-400 text-pink-500 hover:underline">View All</button>
                     </div>
-                    <div className="grid grid-cols-2 h-full">
-                        <p>Rainy Day</p>
-                        <p>Recurring Deposit</p>
-                        <p>Fixed Deposit</p>
-                        <p>Mutual Fund</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 h-full gap-6">
+                        <FundCard />
+                        <FundCard />
+                        <FundCard />
+                        <FundCard />
                     </div>
                 </div>
             </div>
@@ -149,7 +149,7 @@ const TransactionHistory = () => {
                 <p className="font-semibold">Transactions</p>
                 <button className="text-xs font-medium dark:text-pink-400 text-pink-500 hover:underline">View All</button>
             </div>
-            <div className="flex flex-col w-full pt-6 overflow-y-scroll gap-y-1 scrollbar-thin scrollbar-thumb-black/10 scrollbar-track-transparent dark:scrollbar-thumb-white/15 dark:scrollbar-track-transparent">
+            <div className="flex flex-col w-full mt-6 overflow-y-scroll gap-y-1 scrollbar-thin scrollbar-thumb-black/10 scrollbar-track-transparent dark:scrollbar-thumb-white/15 dark:scrollbar-track-transparent">
                 <Transaction />
                 <Transaction />
                 <Transaction />
@@ -170,6 +170,15 @@ const Transaction = () => {
                 </div>
                 <p className="text-xs text-neutral-700 dark:text-neutral-400 font-light py-1">Oct 25, 19:04</p>
             </div>
+        </div>
+    )
+}
+
+const FundCard = () => {
+    return (
+        <div className="flex flex-col items-start gap-y-1 bg-indigo-200 dark:bg-white/10 rounded-2xl p-6">
+            <p className="text-sm font-light">Mutual Fund</p>
+            <p className="text-lg tracking-wide font-semibold">$ 120,983.01</p>
         </div>
     )
 }
