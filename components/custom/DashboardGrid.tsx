@@ -45,6 +45,42 @@ const DashboardGrid = () => {
                     </div>
                 </div>
             </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex flex-col gap-y-8 border rounded-2xl p-6 dark:border-neutral-500 bg-gradient-to-t dark:bg-gradient-to-b from-indigo-100 to-slate-50 dark:from-neutral-950 dark:to-white/5">
+                    <div className="flex items-baseline justify-between">
+                        <p className="text-xl font-semibold">Goals</p>
+                        <button className="text-xs font-medium dark:text-pink-400 text-pink-500 hover:underline">View All</button>
+                    </div>
+                    <div className="flex flex-col md:flex-row items-center justify-between">
+                        <div className="flex items-center justify-center">
+                            <svg className="w-56 h-56" viewBox="0 0 200 200">
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style={{ stopColor: "#6366f1", stopOpacity: 1 }} />
+                                        <stop offset="100%" style={{ stopColor: "#d6ade0", stopOpacity: 1 }} />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="100" cy="100" r="80" stroke="currentColor" strokeWidth="8" fill="transparent"
+                                    className="text-slate-300 dark:text-slate-700" />
+                                <circle cx="100" cy="100" r="80" stroke="url(#gradient)" strokeWidth="8" fill="transparent"
+                                    strokeDasharray={`${2 * Math.PI * 80}`}
+                                    strokeDashoffset={`${2 * Math.PI * 80 * (1 - 0.7)}`}
+                                    strokeLinecap="round"
+                                    />
+                            </svg>
+                            <span className="absolute text-4xl text-indigo-500">70%</span>
+                        </div>
+                        <div className="flex flex-col p-6 gap-y-2">
+                            <p className="text-sm font-medium">Apple iPhone 16 Pro</p>
+                            <p className="text-sm font-light">Required: <span className="font-medium">$ 1000</span></p>
+                            <p className="text-sm font-light">Saved: <span className="font-medium">$ 700</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-y-8 border rounded-2xl p-6 dark:border-neutral-500 bg-gradient-to-t dark:bg-gradient-to-b from-indigo-100 to-slate-50 dark:from-neutral-950 dark:to-white/5">
+                    Funds
+                </div>
+            </div>
         </div>
         <div className="flex flex-col w-full md:w-[30%] items-center h-[85vh] p-8 border md:ml-6 rounded-2xl dark:border-neutral-500 bg-gradient-to-t dark:bg-gradient-to-b from-indigo-100 to-slate-50 dark:from-neutral-950 dark:to-white/5">
             <Card />
@@ -104,7 +140,7 @@ const TransactionHistory = () => {
                 <p className="font-semibold">Transactions</p>
                 <button className="text-xs font-medium dark:text-pink-400 text-pink-500 hover:underline">View All</button>
             </div>
-            <div className="flex flex-col w-full pt-6 overflow-scroll gap-y-1">
+            <div className="flex flex-col w-full pt-6 overflow-y-scroll gap-y-1">
                 <Transaction />
                 <Transaction />
                 <Transaction />
