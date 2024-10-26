@@ -10,7 +10,7 @@ const DashboardGrid = () => {
                 </h1>
                 <button className="flex gap-x-2 items-center px-4 py-2 transition-colors bg-indigo-600 hover:bg-indigo-700 rounded-md text-white">
                     <PlusIcon className="h-4"/>
-                    <p className="text-sm font-medium">New Transaction</p>
+                    <p className="text-sm font-medium">New</p>
                 </button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 py-8 gap-6">
@@ -72,13 +72,22 @@ const DashboardGrid = () => {
                         </div>
                         <div className="flex flex-col p-6 gap-y-2">
                             <p className="text-sm font-medium">Apple iPhone 16 Pro</p>
-                            <p className="text-sm font-light">Required: <span className="font-medium">$ 1000</span></p>
-                            <p className="text-sm font-light">Saved: <span className="font-medium">$ 700</span></p>
+                            <p className="text-sm font-light dark:text-slate-200">Required: <span className="font-medium">$ 1000</span></p>
+                            <p className="text-sm font-light dark:text-slate-200">Saved: <span className="font-medium">$ 700</span></p>
                         </div>
                     </div>
                 </div>
                 <div className="flex flex-col gap-y-8 border rounded-2xl p-6 dark:border-neutral-500 bg-gradient-to-t dark:bg-gradient-to-b from-indigo-100 to-slate-50 dark:from-neutral-950 dark:to-white/5">
-                    Funds
+                    <div className="flex items-baseline justify-between">
+                        <p className="text-xl font-semibold">Funds</p>
+                        <button className="text-xs font-medium dark:text-pink-400 text-pink-500 hover:underline">View All</button>
+                    </div>
+                    <div className="grid grid-cols-2 h-full">
+                        <p>Rainy Day</p>
+                        <p>Recurring Deposit</p>
+                        <p>Fixed Deposit</p>
+                        <p>Mutual Fund</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,7 +149,7 @@ const TransactionHistory = () => {
                 <p className="font-semibold">Transactions</p>
                 <button className="text-xs font-medium dark:text-pink-400 text-pink-500 hover:underline">View All</button>
             </div>
-            <div className="flex flex-col w-full pt-6 overflow-y-scroll gap-y-1">
+            <div className="flex flex-col w-full pt-6 overflow-y-scroll gap-y-1 scrollbar-thin scrollbar-thumb-black/10 scrollbar-track-transparent dark:scrollbar-thumb-white/15 dark:scrollbar-track-transparent">
                 <Transaction />
                 <Transaction />
                 <Transaction />
