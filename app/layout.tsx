@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/themeProvider";
 
 const monsterrat = Montserrat({
   weight: ['200', '300', '400', '500', '600', '700' , '800'],
@@ -23,14 +22,7 @@ export default function RootLayout({
       <body
         className={monsterrat.className}
       >
-      {/* <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-      > */}
-          {children}
-      {/* </ThemeProvider> */}
+        {children}
       </body>
     </html>
   );

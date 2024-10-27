@@ -5,15 +5,25 @@ import { Moon, Sun } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
-type theme = "system" | "dark" | "light";
+type Theme = "system" | "dark" | "light";
 
 export function ModeToggle() {
-  const [theme, setTheme] = React.useState<theme>("system");
+  const [theme, setTheme] = React.useState<Theme>("system");
+
+  React.useEffect(() => {
+    // Retrieve the stored theme from localStorage or default to "system"
+    const storedTheme = localStorage.getItem("theme") as Theme | null;
+    if (storedTheme) {
+      setTheme(storedTheme);
+    } else {
+      setTheme("system"); // Default to "system" if nothing is stored
+    }
+  }, []);
 
   React.useEffect(() => {
     const htmlElement = document.getElementsByTagName("html")[0];
 
-    const updateTheme = (newTheme: theme) => {
+    const updateTheme = (newTheme: Theme) => {
       if (newTheme === "system") {
         const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
         htmlElement.classList.remove("light", "dark");
@@ -43,7 +53,9 @@ export function ModeToggle() {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme); // Persist the theme in localStorage
   };
   return (
     <Button variant="outline" size="icon" onClick={toggleTheme}>
