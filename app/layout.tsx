@@ -22,16 +22,15 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={monsterrat.className}
-        suppressHydrationWarning={true}
       >
-      <ThemeProvider
+      {/* <ThemeProvider
         attribute="class"
         defaultTheme="system"
         enableSystem
         disableTransitionOnChange
-      >
+      > */}
           {children}
-      </ThemeProvider>
+      {/* </ThemeProvider> */}
       </body>
     </html>
   );
