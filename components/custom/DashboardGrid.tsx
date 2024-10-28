@@ -2,7 +2,7 @@
 
 import { ArrowDownCircle, ArrowLeftRight, ArrowUpCircle, DollarSign, MoreHorizontal, PiggyBank, PlusIcon, SquareArrowRight } from "lucide-react"
 import { BarChart, barElementClasses } from '@mui/x-charts/BarChart';
-import { axisClasses } from "@mui/x-charts";
+import { axisClasses, barLabelClasses } from "@mui/x-charts";
 
 const DashboardGrid = () => {
   return (
@@ -112,7 +112,9 @@ const DashboardGrid = () => {
                     <p className="text-xl font-semibold">Spending Analytics</p>
                     <button className="text-xs font-medium dark:text-pink-400 text-pink-500 hover:underline">View All</button>
                 </div>
-                <SimpleChart />
+                <div className="pt-6 overflow-x-scroll">
+                    <SimpleChart />
+                </div>
             </div>
         </div>
         <div className="flex flex-col w-full md:w-[30%] items-center h-[85vh] p-8 border md:ml-6 rounded-2xl dark:border-neutral-500 bg-gradient-to-t dark:bg-gradient-to-b from-indigo-100 to-slate-50 dark:from-neutral-950 dark:to-white/5">
@@ -192,7 +194,7 @@ const Transaction = () => {
                     <p className="text-xs font-bold">John Doe</p>
                     <p className="text-xs font-semibold text-rose-500">$200</p>
                 </div>
-                <p className="text-xs text-neutral-700 dark:text-neutral-400 font-light py-1">Oct 25, 19:04</p>
+                <p className="text-xs text-neutral-700 text-[#ff0000] dark:text-neutral-400 font-light py-1">Oct 25, 19:04</p>
             </div>
         </div>
     )
@@ -217,25 +219,28 @@ const SimpleChart = () => {
     return (
         <BarChart
         sx={(theme) => ({
-            [`.${axisClasses.root}`]: {
-              [`.${axisClasses.tick}, .${axisClasses.line}`]: {
-                stroke: '#006BD6',
-                strokeWidth: 3,
-              },
-              [`.${axisClasses.tickLabel}`]: {
-                fill: '#006BD6',
-              },
+            [`.${barLabelClasses.root}`]: {
+                fontSize: "60px"
             },
-            border: '1px solid rgba(0, 0, 0, 0.1)',
-            backgroundImage:
-              'linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)',
-            backgroundSize: '35px 35px',
-            backgroundPosition: '20px 20px, 20px 20px',
-            ...theme.applyStyles('dark', {
-              borderColor: 'rgba(255,255,255, 0.1)',
-              backgroundImage:
-                'linear-gradient(rgba(255,255,255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255, 0.1) 1px, transparent 1px)',
-            }),
+            [`.${axisClasses.root}`]: {
+                [`.${axisClasses.tick}, .${axisClasses.line}`]: {
+                  stroke: theme.palette.mode === 'dark' ? '#B0BEC5' : '#424658', // Adjust stroke color for dark/light mode
+                  strokeWidth: 3,
+                },
+                [`.${axisClasses.tickLabel}`]: {
+                  fill: theme.palette.mode === 'dark' ? '#B0BEC5' : '#006BD6', // Adjust fill color for dark/light mode
+                },
+                [`.${axisClasses.label}`]: {
+                  fill: theme.palette.mode === 'dark' ? '#B0BEC5' : '#006BD6', // Set label color same as tick line and tick label
+                },
+              },
+              border: '1px solid',
+              borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+              backgroundImage: theme.palette.mode === 'dark'
+                ? 'linear-gradient(rgba(255,255,255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255, 0.1) 1px, transparent 1px)'
+                : 'linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)',
+              backgroundSize: '35px 35px',
+              backgroundPosition: '20px 20px, 20px 20px',
           })}
           xAxis={[{ scaleType: 'band', data: labels }]}
           series={[
