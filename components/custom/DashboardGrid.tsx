@@ -1,8 +1,8 @@
 "use client";
 
 import { ArrowDownCircle, ArrowLeftRight, ArrowUpCircle, DollarSign, MoreHorizontal, PiggyBank, PlusIcon, SquareArrowRight } from "lucide-react"
-import { BarChart, barElementClasses } from '@mui/x-charts/BarChart';
-import { axisClasses, barLabelClasses } from "@mui/x-charts";
+import { BarChart } from '@mui/x-charts/BarChart';
+import { axisClasses } from "@mui/x-charts";
 
 const DashboardGrid = () => {
   return (
@@ -112,9 +112,6 @@ const DashboardGrid = () => {
                     <p className="text-xl font-semibold">Spending Analytics</p>
                     <button className="text-xs font-medium dark:text-pink-400 text-pink-500 hover:underline">View All</button>
                 </div>
-                <div className="pt-6 overflow-x-scroll">
-                    <SimpleChart />
-                </div>
             </div>
         </div>
         <div className="flex flex-col w-full md:w-[30%] items-center h-[85vh] p-8 border md:ml-6 rounded-2xl dark:border-neutral-500 bg-gradient-to-t dark:bg-gradient-to-b from-indigo-100 to-slate-50 dark:from-neutral-950 dark:to-white/5">
@@ -208,52 +205,3 @@ const FundCard = () => {
         </div>
     )
 }
-
-const labels: string[] = ['Oct 1', 'Oct 2', 'Oct 3', 'Oct 4', 'Oct 5', 'Oct 6', 'Oct 7', 'Oct 8', 'Oct 9', 'Oct 10', 'Oct 11', 'Oct 12', 'Oct 13', 'Oct 14', 'Oct 15', 'Oct 16', 'Oct 17', 'Oct 18', 'Oct 19', 'Oct 20', 'Oct 21', 'Oct 22', 'Oct 23', 'Oct 24', 'Oct 25', 'Oct 26', 'Oct 27', 'Oct 28', 'Oct 29', 'Oct 30', 'Oct 31'];
-const lData: number[] = [42, 24, 56, 45, 3, 42, 24, 56, 45, 3, 42, 24, 56, 45, 3, 42, 24, 56, 45, 3, 42, 24, 56, 45, 3, 42, 24, 56, 45, 3, 12];
-const rData: number[] = [57, 7, 19, 16, 22, 57, 7, 19, 16, 22, 57, 7, 19, 16, 22, 57, 7, 19, 16, 22, 57, 7, 19, 16, 22, 57, 7, 19, 16, 22, 1];
-const mData: number[] = [17, 2, 49, 6, 12, 17, 2, 49, 6, 12, 17, 2, 49, 6, 12, 17, 2, 49, 6, 12, 17, 2, 49, 6, 12, 17, 2, 49, 6, 12, 20];
-const colors: string[] = ['#db76b5', '#c4cff6', '#4e3dc1'];
-
-const SimpleChart = () => {
-    return (
-        <BarChart
-        sx={(theme) => ({
-            [`.${axisClasses.root}`]: {
-                [`.${axisClasses.tick}, .${axisClasses.line}`]: {
-                  stroke: theme.palette.mode === 'dark' ? '#B0BEC5' : '#424658', // Adjust stroke color for dark/light mode
-                  strokeWidth: 3,
-                },
-                [`.${axisClasses.tickLabel}`]: {
-                  fill: theme.palette.mode === 'dark' ? '#B0BEC5' : '#006BD6', // Adjust fill color for dark/light mode
-                },
-                [`.${axisClasses.label}`]: {
-                  fill: theme.palette.mode === 'dark' ? '#B0BEC5' : '#006BD6', // Set label color same as tick line and tick label
-                },
-              },
-              border: '1px solid',
-              borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
-              backgroundImage: theme.palette.mode === 'dark'
-                ? 'linear-gradient(rgba(255,255,255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255, 0.1) 1px, transparent 1px)'
-                : 'linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)',
-              backgroundSize: '35px 35px',
-              backgroundPosition: '20px 20px, 20px 20px',
-          })}
-          xAxis={[{ scaleType: 'band', data: labels }]}
-          series={[
-            { data: lData, label: 'Income', id: 'l_id' },
-            { data: mData, label: 'Expense', id: 'm_id' },
-            { data: rData, label: 'Savings', id: 'r_id' },
-          ]}
-          colors={colors}
-            width={1200}
-            height={400}
-        />
-    )
-}
-
-// xAxis={[{ 
-//     scaleType: 'band', 
-//     data: ['Day1', 'Day2', 'Day3', 'Day4', 'Day5']
-// }]}
-// series={[{ data: [4, 3, 5, 2 ,1], color: "#4e3dc1" }, { data: [1, 6, 3, 0, 9], color: "#c4cff6" }, { data: [2, 5, 6, 2, 4], color: "#db76b5" }]}
