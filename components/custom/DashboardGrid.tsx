@@ -64,13 +64,26 @@ const DashboardGrid = () => {
                                         <stop offset="100%" style={{ stopColor: "#d6ade0", stopOpacity: 1 }} />
                                     </linearGradient>
                                 </defs>
-                                <circle cx="100" cy="100" r="80" stroke="currentColor" strokeWidth="8" fill="transparent"
-                                    className="text-slate-300 dark:text-slate-700" />
-                                <circle cx="100" cy="100" r="80" stroke="url(#gradient)" strokeWidth="8" fill="transparent"
+                                <circle 
+                                    cx="100" 
+                                    cy="100" 
+                                    r="80" 
+                                    stroke="currentColor" 
+                                    strokeWidth="8" 
+                                    fill="transparent"
+                                    className="text-slate-300 dark:text-slate-700" 
+                                />
+                                <circle 
+                                    cx="100" 
+                                    cy="100" 
+                                    r="80" 
+                                    stroke="url(#gradient)" 
+                                    strokeWidth="8" 
+                                    fill="transparent"
                                     strokeDasharray={`${2 * Math.PI * 80}`}
                                     strokeDashoffset={`${2 * Math.PI * 80 * (1 - 0.7)}`}
                                     strokeLinecap="round"
-                                    />
+                                />
                             </svg>
                             <span className="absolute text-4xl text-indigo-500">70%</span>
                         </div>
