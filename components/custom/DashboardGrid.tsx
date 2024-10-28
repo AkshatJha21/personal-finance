@@ -1,8 +1,6 @@
 "use client";
 
-import { ArrowDownCircle, ArrowLeftRight, ArrowUpCircle, DollarSign, MoreHorizontal, PiggyBank, PlusIcon, SquareArrowRight } from "lucide-react"
-import { BarChart } from '@mui/x-charts/BarChart';
-import { axisClasses } from "@mui/x-charts";
+import { ArrowDownCircle, ArrowLeftRight, ArrowUpCircle, MoreHorizontal, PlusIcon, SquareArrowRight } from "lucide-react"
 
 const DashboardGrid = () => {
   return (
