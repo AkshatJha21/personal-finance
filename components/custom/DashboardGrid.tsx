@@ -194,7 +194,7 @@ const Transaction = () => {
                     <p className="text-xs font-bold">John Doe</p>
                     <p className="text-xs font-semibold text-rose-500">$200</p>
                 </div>
-                <p className="text-xs text-neutral-700 text-[#ff0000] dark:text-neutral-400 font-light py-1">Oct 25, 19:04</p>
+                <p className="text-xs text-neutral-700 dark:text-neutral-400 font-light py-1">Oct 25, 19:04</p>
             </div>
         </div>
     )
@@ -219,9 +219,6 @@ const SimpleChart = () => {
     return (
         <BarChart
         sx={(theme) => ({
-            [`.${barLabelClasses.root}`]: {
-                fontSize: "60px"
-            },
             [`.${axisClasses.root}`]: {
                 [`.${axisClasses.tick}, .${axisClasses.line}`]: {
                   stroke: theme.palette.mode === 'dark' ? '#B0BEC5' : '#424658', // Adjust stroke color for dark/light mode
