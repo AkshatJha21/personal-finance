@@ -22,7 +22,7 @@ const DashboardGrid = () => {
                         <p className="text-3xl font-medium tracking-wide">$ 5347.68</p>
                         <div className="flex items-center text-rose-500">
                             <ArrowDownCircle className="h-3"/>
-                            <p className="text-xs font-semibold">20%</p>
+                            <p className="text-xs font-semibold">17%</p>
                         </div>
                     </div>
                 </div>
