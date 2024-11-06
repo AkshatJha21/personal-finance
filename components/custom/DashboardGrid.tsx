@@ -10,8 +10,8 @@ import { PieChart } from "./pieChart";
 
 const DashboardGrid = () => {
     return (
-        <div className="px-6 py-4 flex flex-col md:flex-row justify-between min-h-[90%]">
-            <div className="flex flex-col w-full md:w-[70%]">
+        <div className="px-6 py-4 flex flex-col lg:flex-row justify-between min-h-[90%]">
+            <div className="flex flex-col w-full lg:w-[70%]">
                 <div className="flex items-center justify-between">
                     <h1 className="font-semibold text-2xl">
                         Welcome, Akshat
@@ -82,7 +82,7 @@ const DashboardGrid = () => {
                     <PieChart />
                 </div>
             </div>
-            <div className="flex flex-col w-full md:w-[30%] items-center md:h-[85vh] p-6 border mt-6 md:mt-0 md:ml-6 rounded-2xl dark:border-neutral-500 bg-gradient-to-t dark:bg-gradient-to-b from-indigo-100 to-slate-50 dark:from-neutral-950 dark:to-white/5">
+            <div className="flex flex-col w-full lg:w-[30%] items-center md:h-[85vh] p-6 border mt-6 md:mt-6 lg:mt-0 lg:ml-6 rounded-2xl dark:border-neutral-500 bg-gradient-to-t dark:bg-gradient-to-b from-indigo-100 to-slate-50 dark:from-neutral-950 dark:to-white/5">
                 <Card />
                 <Options />
                 <TransactionHistory />
