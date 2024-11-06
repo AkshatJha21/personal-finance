@@ -3,7 +3,7 @@
 export const Transaction = () => {
     return (
         <div className="flex items-center w-full py-2 pr-4">
-            <div className="h-12 w-12 bg-purple-500 mr-2 rounded-full" />
+            <div className="h-12 aspect-square bg-purple-500 mr-2 rounded-full" />
             <div className="flex flex-col w-[80%]">
                 <div className="flex w-full items-center justify-between">
                     <p className="text-xs font-bold">John Doe</p>
