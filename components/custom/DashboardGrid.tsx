@@ -1,36 +1,26 @@
 "use client";
 
 import { ArrowDownCircle, ArrowLeftRight, ArrowUpCircle, MoreHorizontal, PlusIcon, SquareArrowRight } from "lucide-react";
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, BarElement, Title, Tooltip, Legend, Filler, } from "chart.js";
-import dynamic from 'next/dynamic';
-import { Bar } from "react-chartjs-2";
-ChartJS.register(CategoryScale, LinearScale, PointElement, BarElement, Title, Tooltip, Legend, Filler );
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, Title, Tooltip, Legend, Filler, ArcElement, } from "chart.js";
+import { Pie } from "react-chartjs-2";
+ChartJS.register(CategoryScale, LinearScale, PointElement, ArcElement, Title, Tooltip, Legend, Filler );
 
 const data = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [
-      {
-        label: 'GeeksforGeeks Bar Chart',
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-        ],
-        borderWidth: 1,
-      },
+    labels: [
+      'Income',
+      'Expense',
+      'Savings'
     ],
+    datasets: [{
+      label: '$',
+      data: [5347, 3403, 1944],
+      backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)'
+      ],
+      hoverOffset: 4
+    }]
   };
 
 const DashboardGrid = () => {
@@ -141,9 +131,14 @@ const DashboardGrid = () => {
                     <p className="text-xl font-semibold">Spending Analytics</p>
                     <button className="text-xs font-medium dark:text-pink-400 text-pink-500 hover:underline">View All</button>
                 </div>
-                <div style={{ width: '700px' }}>
-                    <h1>Example 2: Bar Chart</h1>
-                    <Bar data={data} />
+                <div className="md:h-[400px] flex flex-col-reverse md:flex-row items-center justify-around py-6">
+                    <div className="flex flex-col pt-6 gap-y-2">
+                        <p className="text-lg font-medium">October 2024</p>
+                        <p className="text-sm font-light dark:text-slate-200">Earned: <span className="font-medium">$ 1000</span></p>
+                        <p className="text-sm font-light dark:text-slate-200">Spent: <span className="font-medium">$ 700</span></p>
+                        <p className="text-sm font-light dark:text-slate-200">Saved: <span className="font-medium">$ 700</span></p>
+                    </div>
+                    <Pie data={data} />
                 </div>
             </div>
         </div>
