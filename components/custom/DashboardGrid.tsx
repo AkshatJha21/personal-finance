@@ -110,6 +110,7 @@ const DashboardGrid = () => {
                     <p className="text-xl font-semibold">Spending Analytics</p>
                     <button className="text-xs font-medium dark:text-pink-400 text-pink-500 hover:underline">View All</button>
                 </div>
+                Chart JS
             </div>
         </div>
         <div className="flex flex-col w-full md:w-[30%] items-center h-[85vh] p-8 border md:ml-6 rounded-2xl dark:border-neutral-500 bg-gradient-to-t dark:bg-gradient-to-b from-indigo-100 to-slate-50 dark:from-neutral-950 dark:to-white/5">
