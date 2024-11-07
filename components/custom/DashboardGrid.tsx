@@ -7,6 +7,7 @@ import { Options } from "./options";
 import { Card } from "./cardLayout";
 import { GoalChart } from "./goalChart";
 import { PieChart } from "./pieChart";
+import RightPanel from "./RightPanel";
 
 const DashboardGrid = () => {
     return (
@@ -82,11 +83,7 @@ const DashboardGrid = () => {
                     <PieChart />
                 </div>
             </div>
-            <div className="flex flex-col w-full lg:w-[30%] items-center md:h-[85vh] p-6 border mt-6 md:mt-6 lg:mt-0 lg:ml-6 rounded-2xl dark:border-neutral-500 bg-gradient-to-t dark:bg-gradient-to-b from-indigo-100 to-slate-50 dark:from-neutral-950 dark:to-white/5">
-                <Card />
-                <Options />
-                <TransactionHistory />
-            </div>
+            <RightPanel />
         </div>
     )
 }
