@@ -66,7 +66,7 @@ export const PieChart = () => {
   };
 
   return (
-    <div className="md:h-[400px] flex flex-col-reverse md:flex-row items-center justify-around py-6">
+    <div className="flex flex-col-reverse md:flex-row items-center justify-around py-6 px-6">
       <div className="flex flex-col pt-6 gap-y-2">
         <p className="text-sm md:text-lg font-medium">{currentMonthData.month} 2024</p>
         <p className="text-sm font-light dark:text-slate-200">
@@ -93,7 +93,11 @@ export const PieChart = () => {
           </button>
         </div>
       </div>
-      <Pie data={data} />
+      <div style={{
+        
+      }}>
+        <Pie data={data} /> 
+      </div>
     </div>
   );
 };

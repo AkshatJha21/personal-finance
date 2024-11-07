@@ -2,7 +2,7 @@
 
 export const GoalChart = () => {
     return (
-        <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="flex flex-col :flex-col md:flex-row items-center justify-between md:justify-evenly">
             <div className="flex items-center justify-center">
                 <svg className="w-56 h-56" viewBox="0 0 200 200">
                     <defs>
@@ -36,8 +36,8 @@ export const GoalChart = () => {
             </div>
             <div className="flex flex-col p-6 gap-y-2">
                 <p className="text-sm font-medium">Apple iPhone 16 Pro</p>
-                <p className="text-sm font-light dark:text-slate-200">Required: <span className="font-medium">$ 1000</span></p>
-                <p className="text-sm font-light dark:text-slate-200">Saved: <span className="font-medium">$ 700</span></p>
+                <p className="text-sm font-light dark:text-slate-200">Saved: <span className="font-medium">$700</span></p>
+                <p className="text-sm font-light dark:text-slate-200">Need: <span className="font-medium">$1000</span></p>
             </div>
         </div>
     )
