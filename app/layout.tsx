@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const monsterrat = Montserrat({
+const montserrat = Montserrat({
   weight: ['200', '300', '400', '500', '600', '700' , '800'],
   subsets: ['latin']
 })
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={monsterrat.className}
+        className={montserrat.className}
       >
         {children}
       </body>
