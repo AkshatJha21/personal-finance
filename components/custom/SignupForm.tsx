@@ -2,6 +2,7 @@
 
 import React from 'react'
 import FormInput from './form-input';
+import Link from 'next/link';
 
 const SignupForm = () => {
   return (
@@ -17,6 +18,11 @@ const SignupForm = () => {
             <button className='mt-2 px-4 py-2 font-medium rounded-md transition bg-gradient-to-tr from-indigo-700 to-[#d6ade0] hover:text-opacity-50 cursor-pointer text-white'>
                 Next
             </button>
+            <p className='text-sm'>Existing user? &nbsp;
+              <Link href={'/login'}>
+                <span className='font-medium hover:underline cursor-pointer'>Login</span>
+              </Link>
+            </p>
         </div>
     </div>
   )
