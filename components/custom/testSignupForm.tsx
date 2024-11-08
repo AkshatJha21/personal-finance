@@ -47,15 +47,13 @@ const SignupForm = () => {
             <h2 className="text-xl lg:text-2xl font-semibold">Step 2: Personal Information</h2>
             <FormInput label="First Name" type="text" handleChange={() => {}} />
             <FormInput label="Last Name" type="text" handleChange={() => {}} />
-            <FormInput label="Phone Number" type="text" handleChange={() => {}} />
           </>
         )}
         {step === 3 && (
           <>
             <h2 className="text-xl lg:text-2xl font-semibold">Step 3: Profile Details</h2>
-            <FormInput label="Account Number" type="text" handleChange={() => {}} />
-            <FormInput label="Set Nex-PIN" type="text" handleChange={() => {}} />
-            <FormInput label="Confirm Nex-PIN" type="text" handleChange={() => {}} />
+            <FormInput label="Username" type="text" handleChange={() => {}} />
+            <FormInput label="Bio" type="text" handleChange={() => {}} />
           </>
         )}
 
