@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import FormInput from './form-input'
 
@@ -9,20 +11,14 @@ const LoginForm = () => {
                 <h1 className='text-xl lg:text-2xl font-semibold'>Welcome back</h1>
                 <p className='text-sm font-light opacity-80'>Sign in to continue</p>
             </div>
-            <FormInput />
-            <Input />
+            <FormInput label='Email' type='email' handleChange={() => {}}/>
+            <FormInput label='Password' type='password' handleChange={() => {}}/>
+            <button className='mt-2 px-4 py-2 font-medium rounded-md transition bg-gradient-to-tr from-indigo-700 to-[#d6ade0] hover:text-opacity-50 cursor-pointer text-white'>
+                Continue
+            </button>
         </div>
     </div>
   )
 }
 
 export default LoginForm
-
-const Input = () => {
-    return (
-        <div className='flex flex-col gap-y-1'>
-            <p className='text-sm font-medium'>Label</p>
-            <input className='border rounded-md bg-slate-50 px-4 py-2 dark:bg-neutral-900'/>
-        </div>
-    )
-}
