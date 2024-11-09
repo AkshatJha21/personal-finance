@@ -44,7 +44,7 @@ const SignupForm = () => {
         )}
         {step === 2 && (
           <>
-            <h2 className="text-xl lg:text-2xl font-semibold">Step 2: Personal Information</h2>
+            <h2 className="text-xl lg:text-2xl font-semibold">Step 2: Personal Info</h2>
             <FormInput label="First Name" type="text" handleChange={() => {}} />
             <FormInput label="Last Name" type="text" handleChange={() => {}} />
             <FormInput label="Phone Number" type="text" handleChange={() => {}} />
