@@ -2,9 +2,9 @@
 
 import { Dispatch, SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
-import { CreditCard, DollarSign, Home, TrendingUp } from "lucide-react";
+import { CreditCard, DollarSign, Home, Landmark, TrendingUp } from "lucide-react";
 
-const tabs = ["Dashboard", "Transactions", "Investments", "Credit"];
+const tabs = ["Dashboard", "Transactions", "Investments", "Account"];
 
 const BottomNav = () => {
     const [selected, setSelected] = useState(tabs[0]);
@@ -39,8 +39,8 @@ const Tab = ({ text, selected, setSelected }: TabProps) => {
                 return <DollarSign className="h-5"/>;
             case "Investments":
                 return <TrendingUp className="h-5"/>;
-            case "Credit":
-                return <CreditCard className="h-5"/>;
+            case "Account":
+                return <Landmark className="h-5"/>;
         }
     }
     return (

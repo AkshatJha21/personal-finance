@@ -12,3 +12,12 @@ export default function Home() {
     </div>
   );
 }
+
+// Payment modal
+// All goals + individual goal + set new goal + save for existing goal
+// All funds (all investments page) + individual fund + invest in new fund
+// Complete Spending analytics
+// All transactions page
+// Transfer modal
+// More dropdown => subscriptions (payments), recurring deposits (investments)
+// all account details => total earnings, total expense, total savings, all investments
