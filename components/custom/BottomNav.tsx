@@ -2,7 +2,7 @@
 
 import { Dispatch, SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
-import { CreditCard, DollarSign, Home, Landmark, TrendingUp } from "lucide-react";
+import { DollarSign, Home, Landmark, TrendingUp } from "lucide-react";
 
 const tabs = ["Dashboard", "Transactions", "Investments", "Account"];
 

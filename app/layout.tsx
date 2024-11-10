@@ -8,8 +8,8 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Nexpense",
-  description: "Track expenses, savings and investments",
+  title: "NexPay",
+  description: "Pay and invest, with just one wallet",
 };
 
 export default function RootLayout({
