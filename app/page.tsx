@@ -2,7 +2,6 @@ import BottomNav from "@/components/custom/BottomNav";
 import DashboardGrid from "@/components/custom/DashboardGrid";
 import Navbar from "@/components/custom/TopBar";
 
-
 export default function Home() {
   return (
     <div className="min-h-screen relative">
@@ -12,7 +11,8 @@ export default function Home() {
     </div>
   );
 }
-// Wallet app -> user creates account and adds money to the wallet from their account
+
+// Wallet app => user creates account and adds money to the wallet from their account
 // then user reallocates the funds from the wallet to various ventures
 // Payment modal
 // All goals + individual goal + set new goal + save for existing goal
