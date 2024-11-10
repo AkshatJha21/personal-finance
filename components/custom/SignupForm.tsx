@@ -21,12 +21,12 @@ const SignupForm = () => {
       <div className="w-[80%] sm:w-[40%] lg:w-[30%] xl:w-[25%] mb-4">
         <div className="flex justify-between text-sm mb-1">
           <span className={step >= 1 ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400 dark:text-neutral-500'}>Step 1</span>
-          <span className={step >= 2 ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400 dark:text-neutral-500'}>Step 2</span>
-          <span className={step >= 3 ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400 dark:text-neutral-500'}>Step 3</span>
+          <span className={step >= 2 ? 'text-purple-600 dark:text-purple-400' : 'text-slate-400 dark:text-neutral-500'}>Step 2</span>
+          <span className={step >= 3 ? 'text-pink-600 dark:text-pink-400' : 'text-slate-400 dark:text-neutral-500'}>Step 3</span>
         </div>
         <div className="relative h-1 w-full bg-slate-300 dark:bg-neutral-700">
           <div
-            className="absolute top-0 h-full bg-indigo-600 dark:bg-indigo-400 transition-all duration-300"
+            className="absolute top-0 h-full bg-gradient-to-r from-indigo-700 to-pink-400 dark:bg-indigo-400 transition-all duration-300"
             style={{ width: `${(step / 3) * 100}%` }}
           />
         </div>
