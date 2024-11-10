@@ -17,7 +17,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, ArcElement, Title, Tooltip, Legend, Filler);
 
-const yearlyData = [
+const yearData = [
   {
     year: 2024,
     months: [
@@ -40,7 +40,7 @@ const yearlyData = [
 export const PieChart = () => {
   const [monthIndex, setMonthIndex] = useState(0);
 
-  const currentMonthData = yearlyData[0].months[monthIndex];
+  const currentMonthData = yearData[0].months[monthIndex];
 
   const data = {
     labels: ["Income", "Expense", "Savings"],
@@ -56,12 +56,12 @@ export const PieChart = () => {
   };
 
   const handleNextMonth = () => {
-    setMonthIndex((prevIndex) => (prevIndex + 1) % yearlyData[0].months.length);
+    setMonthIndex((prevIndex) => (prevIndex + 1) % yearData[0].months.length);
   };
 
   const handlePreviousMonth = () => {
     setMonthIndex((prevIndex) =>
-      prevIndex === 0 ? yearlyData[0].months.length - 1 : prevIndex - 1
+      prevIndex === 0 ? yearData[0].months.length - 1 : prevIndex - 1
     );
   };
 
