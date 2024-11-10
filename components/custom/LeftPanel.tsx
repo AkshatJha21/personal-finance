@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDownCircle, ArrowUpCircle, PlusIcon } from 'lucide-react'
+import { ArrowDownCircle, ArrowUpCircle, SquareArrowRight } from 'lucide-react'
 import React from 'react'
 import { GoalChart } from './goalChart'
 import { FundCard } from './fundcard'
@@ -11,11 +11,11 @@ const LeftPanel = () => {
         <div className="flex flex-col w-full lg:w-[60%] xl:w-[70%]">
             <div className="flex items-center justify-between">
                 <h1 className="font-semibold text-2xl">
-                    Welcome, Akshat
+                    Hello, Akshat
                 </h1>
                 <button className="flex gap-x-2 items-center px-4 py-2 transition-colors bg-indigo-600 hover:bg-indigo-700 rounded-md text-white">
-                    <PlusIcon className="h-4" />
-                    <p className="text-sm font-medium">New</p>
+                    <SquareArrowRight className="h-4" />
+                    <p className="text-sm font-medium">Pay</p>
                 </button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 py-8 gap-6">
