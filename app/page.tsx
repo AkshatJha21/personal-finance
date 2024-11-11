@@ -16,7 +16,7 @@ export default function Home() {
 // then user reallocates the funds from the wallet to various ventures
 // Payment modal
 // All goals + individual goal + set new goal + save for existing goal
-// All funds (all investments page) + individual fund + invest in new fund
+// All investments page + individual fund + invest in new fund
 // Complete Spending analytics
 // All transactions page
 // Transfer modal
