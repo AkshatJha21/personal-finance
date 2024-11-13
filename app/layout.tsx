@@ -8,7 +8,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "NexPay",
+  title: "Nexpense",
   description: "Pay and invest, with just one wallet",
 };
 
