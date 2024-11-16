@@ -2,21 +2,41 @@
 
 import { Dispatch, SetStateAction, useState } from "react";
 import { motion } from "framer-motion";
-import { DollarSign, Home, Landmark, TrendingUp } from "lucide-react";
+import { DollarSign, Home, TrendingUp, Wallet } from "lucide-react";
+import { useRouter } from "next/navigation";
 
-const tabs = ["Dashboard", "Transactions", "Investments", "Account"];
+const tabs = ["Home", "Transactions", "Investments", "Wallet"];
+const navs = [
+    {
+        name: "Home",
+        page: "/",
+    },
+    {
+        name: "Transactions",
+        page: "/transactions"
+    },
+    {
+        name: "Investments",
+        page: "/investments"
+    },
+    {
+        name: "Wallet",
+        page: "/wallet"
+    }
+]
 
 const BottomNav = () => {
     const [selected, setSelected] = useState(tabs[0]);
   return (
     <div className='fixed bottom-6 flex w-full items-center justify-center'>
         <div className='flex gap-x-4 p-2 bg-gradient-to-b from-slate-100 to-slate-200 dark:from-neutral-700 dark:to-neutral-800  rounded-md w-[80%] sm:w-[60%] shadow-md justify-between'>
-            {tabs.map((tab) => (
+            {navs.map((tab) => (
                 <Tab 
-                    text={tab}
-                    selected={selected === tab}
+                    text={tab.name}
+                    selected={selected === tab.name}
                     setSelected={setSelected}
-                    key={tab}
+                    key={tab.name}
+                    pageName={tab.page}
                 />
             ))}
         </div>
@@ -28,24 +48,29 @@ interface TabProps {
     text: string;
     selected: boolean;
     setSelected: Dispatch<SetStateAction<string>>;
+    pageName: string;
 }
 
-const Tab = ({ text, selected, setSelected }: TabProps) => {
+const Tab = ({ text, selected, setSelected, pageName }: TabProps) => {
+    const router = useRouter();
     const getIcon = () => {
         switch (text) {
-            case "Dashboard":
+            case "Home":
                 return <Home className="h-5"/>;
             case "Transactions":
                 return <DollarSign className="h-5"/>;
             case "Investments":
                 return <TrendingUp className="h-5"/>;
-            case "Account":
-                return <Landmark className="h-5"/>;
+            case "Wallet":
+                return <Wallet className="h-5"/>;
         }
     }
     return (
         <button
-            onClick={() => setSelected(text)}
+            onClick={() => {
+                setSelected(text);
+                router.push(pageName);
+            }}
             className={`${
                 selected 
                 ? "text-white"

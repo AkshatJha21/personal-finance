@@ -4,7 +4,7 @@ export const Card = () => {
     return (
         <div className="flex flex-col justify-between aspect-[1.586] w-full text-white bg-gradient-to-tr from-indigo-700 to-pink-400 rounded-2xl p-6">
             <div className="flex justify-between w-full items-baseline">
-                <p className="font-light text-sm">Current Card</p>
+                <p className="font-light text-sm">Your Wallet</p>
                 <p className="font-medium text-sm">**** 6357</p>
             </div>
             <div className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-medium">
