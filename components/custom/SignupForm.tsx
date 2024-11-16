@@ -86,9 +86,9 @@ const SignupForm = () => {
               Next
             </button>
           ) : (
-            <button className="px-4 py-2 font-medium rounded-md transition bg-gradient-to-tr from-indigo-700 to-[#d6ade0] hover:opacity-80 cursor-pointer text-white w-full">
+            <a href='/' className="px-4 py-2 text-center font-medium rounded-md transition bg-gradient-to-tr from-indigo-700 to-[#d6ade0] hover:opacity-80 cursor-pointer text-white w-full">
               Submit
-            </button>
+            </a>
           )}
         </div>
 

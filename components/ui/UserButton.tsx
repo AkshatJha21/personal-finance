@@ -3,6 +3,7 @@
 import { LogOut, Settings, User } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 
 const UserButton = () => {
@@ -62,7 +63,9 @@ const Dropdown = () => {
                 </button>
                 <button className="py-2 px-4 transition-all hover:bg-slate-300 dark:hover:bg-black/30 rounded flex w-full items-center">
                     <LogOut className="h-5 mr-2"/>
-                    <p className="font-medium">Logout</p>
+                    <Link href={'/login'}>
+                        <p className="font-medium">Logout</p>
+                    </Link>
                 </button>
             </div>
         </motion.div>

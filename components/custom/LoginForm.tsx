@@ -14,9 +14,10 @@ const LoginForm = () => {
             </div>
             <FormInput label='Email' type='email' handleChange={() => {}}/>
             <FormInput label='Password' type='password' handleChange={() => {}}/>
-            <button className='mt-2 px-4 py-2 font-medium rounded-md transition bg-gradient-to-tr from-indigo-700 to-[#d6ade0] hover:text-opacity-50 cursor-pointer text-white'>
-                Continue
-            </button>
+            
+            <a href='/' className='mt-2 px-4 py-2 text-center font-medium rounded-md transition bg-gradient-to-tr from-indigo-700 to-[#d6ade0] hover:text-opacity-50 cursor-pointer text-white'>
+              Continue
+            </a>
             <p className='text-sm'>New here? &nbsp;
               <Link href={'/signup'}>
                 <span className='font-medium hover:underline cursor-pointer'>Sign up</span>

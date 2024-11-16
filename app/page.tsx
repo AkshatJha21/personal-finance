@@ -11,14 +11,3 @@ export default function Home() {
     </div>
   );
 }
-
-// Wallet app => user creates account and adds money to the wallet from their account
-// then user reallocates the funds from the wallet to various ventures
-// Payment modal
-// All goals + individual goal + set new goal + save for existing goal
-// All investments page + individual fund + invest in new fund
-// Complete Spending analytics
-// All transactions page
-// Transfer modal
-// More dropdown => subscriptions (payments), recurring deposits (investments)
-// all account details => total earnings, total expense, total savings, all investments
