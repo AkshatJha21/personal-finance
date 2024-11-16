@@ -1,13 +1,16 @@
-import BottomNav from "@/components/custom/BottomNav";
-import DashboardGrid from "@/components/custom/DashboardGrid";
-import Navbar from "@/components/custom/TopBar";
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
+  const router = useRouter();
+  useEffect(() => {
+    router.push('/home');
+  });
   return (
     <div className="min-h-screen relative">
-      <Navbar />
-      <DashboardGrid />
-      <BottomNav />
+      
     </div>
   );
 }

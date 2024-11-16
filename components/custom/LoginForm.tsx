@@ -15,7 +15,7 @@ const LoginForm = () => {
             <FormInput label='Email' type='email' handleChange={() => {}}/>
             <FormInput label='Password' type='password' handleChange={() => {}}/>
             
-            <a href='/' className='mt-2 px-4 py-2 text-center font-medium rounded-md transition bg-gradient-to-tr from-indigo-700 to-[#d6ade0] hover:text-opacity-50 cursor-pointer text-white'>
+            <a href='/home' className='mt-2 px-4 py-2 text-center font-medium rounded-md transition bg-gradient-to-tr from-indigo-700 to-[#d6ade0] hover:text-opacity-50 cursor-pointer text-white'>
               Continue
             </a>
             <p className='text-sm'>New here? &nbsp;

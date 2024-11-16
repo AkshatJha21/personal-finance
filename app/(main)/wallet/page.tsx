@@ -3,14 +3,14 @@ import GoalsTable from '@/components/custom/GoalsTable'
 import Navbar from '@/components/custom/TopBar'
 import React from 'react'
 
-const TransactionsPage = () => {
+const WalletPage = () => {
   return (
     <div className="min-h-screen relative">
-      <Navbar />
+      {/* <Navbar /> */}
       <GoalsTable />
-      <BottomNav />
+      {/* <BottomNav /> */}
     </div>
   )
 }
 
-export default TransactionsPage
+export default WalletPage

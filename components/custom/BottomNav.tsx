@@ -9,7 +9,7 @@ const tabs = ["Home", "Transactions", "Investments", "Wallet"];
 const navs = [
     {
         name: "Home",
-        page: "/",
+        page: "/home",
     },
     {
         name: "Transactions",
