@@ -5,10 +5,8 @@ import React from 'react'
 
 const GoalsPage = () => {
   return (
-    <div className="min-h-screen relative">
-      <Navbar />
+    <div className="relative">
       <GoalsTable />
-      <BottomNav />
     </div>
   )
 }
