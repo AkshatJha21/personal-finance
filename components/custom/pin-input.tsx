@@ -42,7 +42,7 @@ const PinInput = ({ length = 4, onPinChange }: PinInputProps) => {
     };
   
     return (
-      <div className="flex gap-x-3 justify-center">
+      <div className="flex gap-x-3 justify-center my-4">
         {values.map((_, index) => (
           <input
             key={index}

@@ -20,14 +20,18 @@ const PaymentModal = ({ onClose }: PaymentModalProps) => {
     if (step < 3) setStep(step + 1);
   };
 
+  const handleBack = () => {
+    setStep((prev) => prev - 1);
+  };
+
   const handleConfirm = () => {
-    console.log("PIN Confirmed:", pin);
-    onClose(); // Close the modal
+    console.log("PIN Confirmed");
+    onClose(); 
   };
 
   return (
-    <div className="fixed w-screen h-screen flex items-center justify-center top-0 left-0 bg-black/50 z-50">
-      <div className="relative p-6 bg-white rounded-lg w-[90%] sm:w-[450px] flex flex-col">
+    <div className="fixed w-screen h-screen flex items-center justify-center top-0 left-0 bg-black/50 dark:bg-black/85 z-50">
+      <div className="relative p-6 bg-white dark:bg-gradient-to-b dark:from-neutral-950 dark:to-neutral-800 dark:border rounded-lg w-[90%] sm:w-[450px] flex flex-col">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -73,12 +77,20 @@ const PaymentModal = ({ onClose }: PaymentModalProps) => {
               type="number"
               className="border rounded-md bg-slate-50 px-4 py-2 dark:bg-neutral-900 my-4"
             />
-            <button
-              className="mt-4 px-4 py-2 text-center font-medium rounded-md transition bg-gradient-to-tr from-indigo-700 to-[#d6ade0] hover:opacity-80 cursor-pointer text-white"
-              onClick={handleNextStep}
-            >
-              Next
-            </button>
+            <div className="flex">
+              <button
+                onClick={handleBack}
+                className="mt-4 px-4 py-2 font-medium rounded-md bg-purple-200 hover:bg-indigo-200 dark:bg-white/10 dark:hover:bg-white/15 transition-all w-full mr-2"
+              >
+                Back
+              </button>
+              <button
+                className="mt-4 px-4 py-2 text-center font-medium rounded-md transition bg-gradient-to-tr from-indigo-700 to-[#d6ade0] hover:opacity-80 cursor-pointer text-white w-full"
+                onClick={handleNextStep}
+              >
+                Next
+              </button>
+            </div>
           </>
         )}
 

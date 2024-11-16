@@ -57,7 +57,7 @@ const LeftPanel = () => {
                     <div className="flex flex-col gap-y-8 border rounded-2xl p-6 dark:border-neutral-500 bg-gradient-to-t dark:bg-gradient-to-b from-indigo-100 to-slate-50 dark:from-neutral-950 dark:to-white/5">
                         <div className="flex items-baseline justify-between">
                             <p className="text-lg md:text-xl font-semibold">Goals</p>
-                            <button className="text-xs font-medium dark:text-pink-400 text-pink-500 hover:underline">View All</button>
+                            <a href='/goals' className="text-xs font-medium dark:text-pink-400 text-pink-500 hover:underline">View All</a>
                         </div>
                         <GoalChart />
                     </div>
