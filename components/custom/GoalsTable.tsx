@@ -11,6 +11,7 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import GoalModal from './GoalModal'
+import EditGoalModal from './EditGoalModal'
 
 const GoalsTable = () => {
     const [openModal, setOpenModal] = useState(false);
@@ -44,12 +45,13 @@ const GoalsTable = () => {
 export default GoalsTable
 
 const TableGoal = () => {
+    const [openEditModal, setOpenEditModal] = useState(false);
     return (
         <>
             <Table>
                 <TableHeader>
                     <TableRow>
-                        <TableHead className="">Sr</TableHead>
+                        <TableHead>Sr</TableHead>
                         <TableHead>Goal</TableHead>
                         <TableHead>Need</TableHead>
                         <TableHead>Saved</TableHead>
@@ -58,18 +60,21 @@ const TableGoal = () => {
                 </TableHeader>
                 <TableBody>
                     <TableRow>
-                        <TableCell className="">1</TableCell>
+                        <TableCell>1</TableCell>
                         <TableCell>Apple iPhone 16 Pro</TableCell>
                         <TableCell>$1000.00</TableCell>
                         <TableCell>$700.00</TableCell>
                         <TableCell>
-                            <button className='flex'>
+                            <button className='flex' onClick={() => setOpenEditModal(true)}>
                                 <Edit className='items-center justify-center h-5'/>
                             </button>
                         </TableCell>
                     </TableRow>
                 </TableBody>
             </Table>
+            {openEditModal && (
+                <EditGoalModal onClose={() => setOpenEditModal(false)}/>
+            )}
         </>
     )
 }
