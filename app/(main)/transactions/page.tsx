@@ -7,7 +7,9 @@ const TransactionsPage = () => {
   return (
     <div className="min-h-screen relative">
       {/* <Navbar /> */}
-      <GoalsTable />
+      <h1 className="font-semibold text-2xl">
+        Transactions 
+      </h1>
       {/* <BottomNav /> */}
     </div>
   )

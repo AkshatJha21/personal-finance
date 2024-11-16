@@ -6,7 +6,7 @@ import UserButton from "../ui/UserButton"
 
 const Navbar = () => {
   return (
-    <div className="flex w-full py-4 px-6 items-center justify-between">
+    <div className="flex w-full py-4 px-6 items-center justify-between relative z-50">
         <h1 className="text-lg md:text-xl font-semibold">NexPay</h1>
         <div className="flex items-center gap-x-6">
         <ModeToggle />
