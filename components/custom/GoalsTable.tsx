@@ -19,7 +19,7 @@ const GoalsTable = () => {
         <>
             <div className='px-6 py-2'>
                 <div className="flex flex-col gap-y-4">
-                    <a href='/' className='flex items-center gap-x-2 hover:opacity-70 transition'>
+                    <a href='/home' className='flex items-center gap-x-2 hover:opacity-70 transition'>
                         <ArrowLeft className='h-5' />
                         <p className='text-sm'>Back</p>
                     </a>
