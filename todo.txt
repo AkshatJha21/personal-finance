@@ -4,8 +4,9 @@
 // All goals / + set new goal / + save for existing goal /
 // Transfer modal / ADD MONEY TO WALLET MODAL now
 // all account details => total earnings, total expense, total savings, all investments
-
 // All transactions page
+
 // All investments page + individual fund + invest in new fund
 // Complete Spending analytics
 // More dropdown => subscriptions (payments), recurring deposits (investments)
+// BACKEND
