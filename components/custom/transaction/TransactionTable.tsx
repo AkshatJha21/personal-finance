@@ -1,4 +1,5 @@
 
+import { ArrowLeft } from "lucide-react"
 import { Payment2, columns } from "./columns"
 import { DataTable } from "./data-table"
 import React from 'react'
@@ -32,9 +33,15 @@ const TransactionTable = async () => {
   const data = await getData()
   return (
     <div className='px-6 py-2'>
+      <div className="flex flex-col gap-y-4">
+      <a href='/home' className='flex items-center gap-x-2 hover:opacity-70 transition'>
+                        <ArrowLeft className='h-5' />
+                        <p className='text-sm'>Back</p>
+                    </a>
         <h1 className="font-semibold text-2xl">
         Your Transactions 
       </h1>
+      </div>
       <div className="py-6">
         <DataTable columns={columns} data={data} /> 
       </div>
